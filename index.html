@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fastfood</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--................................. HEADER........................... -->
+    <div class="header py-2">
+      <div class="container-fluid">
+        <div class="row d-flex">
+          <div class="col-2 ">
+            <img src="images/freshcart-logo.svg" alt="" />
+          </div>
+          <div class="col-6">
+            <form action="" class="input-group">
+              <span class="input-group-text gap-5">
+                All Categories <i class="bi bi-chevron-down"></i
+              ></span>
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Search for products"
+              />
+              <button type="button" class="btn btn-light">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+          </div>
+
+          <div class="col-4 gap-5">
+            <div class="d-flex gap-5">
+              <button type="button" class="btn btn-outline-secondary">
+                <i class="bi bi-geo-alt"></i> Pick Location
+              </button>
+
+              <div class="col d-flex gap-5 align-items-center">
+                <div class="btn btn-sm position-relative">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-heart"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    ></path>
+                  </svg>
+                       <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">5+</span>
+               </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-user"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+
+                 <div class="btn btn-sm position-relative">
+                   <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-shopping-bag"
+                >
+                  <path
+                    d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                  ></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                       <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">1+</span>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ..................................NAVBAR.......................................... -->
+
+    <div class="navbar navbar-expand-lg navbar-dark bg-success mt-2">
+      <div class="container-fluid px-5">
+        <div class="row">
+          <div class="col-12 d-flex text-white gap-3 ">
+              <div class="dropdown ">
+                     <button class="btn text-light px-6" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="me-1">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+                              <rect x="3" y="3" width="7" height="7"></rect>
+                              <rect x="14" y="3" width="7" height="7"></rect>
+                              <rect x="14" y="14" width="7" height="7"></rect>
+                              <rect x="3" y="14" width="7" height="7"></rect>
+                           </svg>
+                        </span>
+                        All Departments
+                     </button>
+                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="">Dairy, Bread &amp; Eggs</a></li>
+                        <li><a class="dropdown-item" href="">Snacks &amp; Munchies</a></li>
+                        <li><a class="dropdown-item" href="">Fruits &amp; Vegetables</a></li>
+                        <li><a class="dropdown-item" href="">Cold Drinks &amp; Juices</a></li>
+                        <li><a class="dropdown-item" href="">Breakfast &amp; Instant Food</a></li>
+                        <li><a class="dropdown-item" href="">Bakery &amp; Biscuits</a></li>
+                        <li><a class="dropdown-item" href="">Chicken, Meat &amp; Fish</a></li>
+                     </ul>
+                  </div>
+
+             <li class="nav-item dropdown mt-2" style="list-style: none;">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home </i></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Home1</a></li>
+            <li><a class="dropdown-item" href="#">Home2</a></li>
+            <li><a class="dropdown-item" href="#">Home3</a></li>
+            <li><a class="dropdown-item" href="#">Home4</a></li>
+            <li><a class="dropdown-item" href="#">Home5</a></li>
+            
+          </ul>
+               </li>
+
+             <li class="nav-item dropdown mt-2" style="list-style: none;">
+                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop </i></a>
+                <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Shop Grid filter</a></li>
+            <li><a class="dropdown-item" href="#">Shop Grid column-3</a></li>
+            <li><a class="dropdown-item" href="#">Shop filter</a></li>
+            <li><a class="dropdown-item" href="#">Shop single</a></li>
+            <li><a class="dropdown-item" href="#">Shop Wide</a></li>
+            <li><a class="dropdown-item" href="#">Shop-2</a></li>
+            <li><a class="dropdown-item" href="#">Shop Checkout</a></li>
+            
+            </ul>
+         </li>
+
+
+            <li class="nav-item dropdown mt-2" style="list-style: none;">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Stores </i></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Store Grid</a></li>
+            <li><a class="dropdown-item" href="#">Store list</a></li>
+            <li><a class="dropdown-item" href="#">Store Single</a></li>
+            
+            
+          </ul>
+               </li>
+
+             <li class="nav-item dropdown mt-2" style="list-style: none;">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mega Manu </i></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Home1</a></li>
+            <li><a class="dropdown-item" href="#">Home2</a></li>
+            <li><a class="dropdown-item" href="#">Home3</a></li>
+            <li><a class="dropdown-item" href="#">Home4</a></li>
+            <li><a class="dropdown-item" href="#">Home5</a></li>
+            
+          </ul>
+          </li>
+          <li class="nav-item dropdown mt-2" style="list-style: none;">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Page </i></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"> Blog Single</a></li>
+            <li><a class="dropdown-item" href="#"> Blog </a></li>
+            <li><a class="dropdown-item" href="#">404 Erroe</a></li>
+            <li><a class="dropdown-item" href="#">About Us</a></li>
+            <li><a class="dropdown-item" href="#">Contact</a></li>
+          
+            
+          </ul>
+               </li>
+
+             <li class="nav-item dropdown mt-2" style="list-style: none;">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account </i></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Singin</a></li>
+            <li><a class="dropdown-item" href="#">Sign Up</a></li>
+            <li><a class="dropdown-item" href="#">Forget Password</a></li>
+            <li><a class="dropdown-item" href="#">My Account</a></li>
+            
+          </ul>
+               </li>
+            <a href="" class="nav-item nav-link mt-2">Dashbord</a>
+            <a href="" class="nav-item nav-link mt-2">Docs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--............................ hero section....................................................... -->
+
+    <div class="container mt-5" style="background-color: #f0f3f2">
+      <div class="row d-flex">
+        <div class="col-9 d-flex">
+          <img src="images/daliya.svg" alt="" />
+          <div class="text mt-2">
+            <h2>Welcome to FreshCart</h2>
+            <p>
+              Download the app get free food &
+              <span style="color: green">$30</span> off on your first order.
+            </p>
+          </div>
+        </div>
+        <div class="col-3 mt-5 px-5">
+          <button class="btn btn-dark">Download FreshCart App</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- .............................card section.................................... -->
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col d-flex gap-5">
+          <div
+            class="card"
+            style="
+              background-image: url(images/ad-banner-1.jpg);
+              background-size: cover;
+              width: 32%;
+            "
+          >
+            <div class="card-body">
+              <div class="py-3 px-3 rounded">
+                <h3 class="fw-bold">
+                  10% cashback on<br />
+                  personal care
+                </h3>
+                <h5 class="text-secondary">Max cashback: $12</h5>
+                <h5 class="text-secondary">
+                  Code: <span class="text-dark"> CARE12</span>
+                </h5>
+                <button class="btn btn-dark">Shop Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card"
+            style="
+              background-image: url(images/ad-banner-2.jpg);
+              background-size: cover;
+              width: 32%;
+            "
+          >
+            <div class="card-body">
+              <div class="py-3 px-3 rounded">
+                <h3 class="fw-bold">Say yes to <br />season’s fresh</h3>
+                <h5 class="text-secondary">
+                  Refresh your day <br />
+                  the fruity way
+                </h5>
+
+                <button class="btn btn-dark">Shop Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card"
+            style="
+              background-image: url(images/ad-banner-3.jpg);
+              background-size: cover;
+              width: 32%;
+            "
+          >
+            <div class="card-body">
+              <div class="py-3 px-3 rounded">
+                <h3 class="fw-bold">
+                  When in doubt,<br />
+                  eat ice cream
+                </h3>
+                <h5 class="text-secondary">
+                  Enjoy a scoop of <br />summer today
+                </h5>
+                <button class="btn btn-dark">Shop Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  .................................category................................................ -->
+
+    <div class="container mt-5 py-5">
+      <h3>Shop by Category</h3>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col py-3 px-3">
+          <div class="card">
+            <img src="images/q1.jpg" alt="" class="rounded" />
+            <p class="px-3 py-2">Dairy,Bread & Eggs</p>
+          </div>
+        </div>
+        <div class="col py-3 px-3">
+          <div class="card">
+            <img src="images/q2.jpg" alt="" class="rounded" />
+            <p class="px-3 py-2">Snaks & Munchies</p>
+          </div>
+        </div>
+        <div class="col py-3 px-3">
+          <div class="card">
+            <img src="images/q3.jpg" alt="" class="rounded" />
+            <p class="px-3 py-2">Bakery & Biscuits</p>
+          </div>
+        </div>
+        <div class="col py-3 px-3">
+          <div class="card">
+            <img src="images/q4.jpg" alt="" class="rounded" />
+            <p class="px-3 py-2">Instant Food</p>
+          </div>
+        </div>
+        <div class="col py-3 px-3">
+          <div class="card">
+            <img src="images/q5.jpg" alt="" class="rounded" />
+            <p class="px-3 py-2">Tea,Coffee & Drinks</p>
+          </div>
+        </div>
+        <div class="col py-3 px-3">
+          <div class="card">
+            <img src="images/q6.jpg" alt="" class="rounded" />
+            <p class="px-3 py-2">Furits & Vegetable</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col py-3 px-3">
+          <div class="card">
+            <img src="images/w1.jpg" alt="" class="rounded" />
+            <p class="px-3 py-2">cold,Drink & Juices</p>
+          </div>
+        </div>
+        <div class="col py-3 px-3">
+          <div class="card">
+            <img src="images/w2.jpg" alt="" class="rounded" />
+            <p class="px-3 py-2">Chicken, Meat & Fish</p>
+          </div>
+        </div>
+        <div class="col py-3 px-3">
+          <div class="card">
+            <img src="images/w3.jpg" alt="" class="rounded" />
+            <p class="px-3 py-2">Baby Care</p>
+          </div>
+        </div>
+        <div class="col py-3 px-3">
+          <div class="card">
+            <img src="images/w4.jpg" alt="" class="rounded" />
+            <p class="px-3 py-2">Cleaning Essiantial</p>
+          </div>
+        </div>
+        <div class="col py-3 px-3">
+          <div class="card">
+            <img src="images/w5.jpg" alt="" class="rounded" />
+            <p class="px-3 py-2">Pet Care</p>
+          </div>
+        </div>
+        <div class="col py-3 px-3">
+          <div class="card">
+            <img src="images/w6.jpg" alt="" class="rounded" />
+            <p class="px-3 py-2">Aata,Rice & Dal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ...................... fruits item section ................................. -->
+
+    <div class="container mt-5 py-3">
+      <h3>Fruits & vegetables</h3>
+      <p class="text-secondary">eat fresh, stay healthy</p>
+    </div>
+
+    <div class="container mb-5">
+      <div class="row d-flex gap-2">
+        <div class="card" style="width: 19%">
+          <div class="card-body position-relative">
+            <img src="images/banana.jpg" alt="" />
+            <span
+              class="position-absolute top-0 mt-3 start-0 ms-2 badge rounded-pill bg-success"
+              >Hot
+            </span>
+            <p class="text-secondary mb-1">Fruit & Vegetavle</p>
+            <p class="mb-1">Fresh Banana</p>
+            <p class="text-warning d-flex gap-2">
+              <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-half"></i>
+              <span class="text-secondary"> 4.5(149)</span>
+            </p>
+            <div class="cart-footer d-flex gap-5 align-items-center">
+              <h5>$24 <del class="text-secondary">$6</del></h5>
+              <button class="btn btn-success">
+                <i class="bi bi-plus"></i>Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 19%">
+          <div class="card-body position-relative">
+            <img src="images/product-img-17.jpg" alt="" />
+            <span
+              class="position-absolute top-0 mt-3 start-0 ms-2 badge rounded-pill bg-danger"
+              >Sale
+            </span>
+            <p class="text-secondary mb-1">Fruit & Vegetavle</p>
+            <p class="mb-1">Fresh Kivi</p>
+            <p class="text-warning d-flex gap-2">
+              <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-half"></i>
+              <span class="text-secondary"> 5.5(149)</span>
+            </p>
+            <div class="cart-footer d-flex gap-5 align-items-center">
+              <h5>$34 <del class="text-secondary">$9</del></h5>
+              <button class="btn btn-success">
+                <i class="bi bi-plus"></i>Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 19%">
+          <div class="card-body position-relative">
+            <img src="images/aple.jpg" alt="" />
+            <span
+              class="position-absolute top-0 mt-3 start-0 ms-2 badge rounded-pill bg-danger"
+              >14%
+            </span>
+            <p class="text-secondary mb-1">Fruit & Vegetavle</p>
+            <p class="mb-1">Fresh Apple</p>
+            <p class="text-warning d-flex gap-2">
+              <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-half"></i>
+              <span class="text-secondary"> 5.5(249)</span>
+            </p>
+            <div class="cart-footer d-flex gap-5 align-items-center">
+              <h5>$64 <del class="text-secondary">$16</del></h5>
+              <button class="btn btn-success">
+                <i class="bi bi-plus"></i>Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 19%">
+          <div class="card-body position-relative">
+            <img src="images/pine.jpg" alt="" />
+            <span
+              class="position-absolute top-0 mt-3 start-0 ms-2 badge rounded-pill bg-success"
+              >Hot
+            </span>
+            <p class="text-secondary mb-1">Fruit & Vegetavle</p>
+            <p class="mb-1">Fresh Pineapple</p>
+            <p class="text-warning d-flex gap-2">
+              <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-half"></i>
+              <span class="text-secondary"> 7.5(749)</span>
+            </p>
+            <div class="cart-footer d-flex gap-5 align-items-center">
+              <h5>$54 <del class="text-secondary">$5</del></h5>
+              <button class="btn btn-success">
+                <i class="bi bi-plus"></i>Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 19%">
+          <div class="card-body position-relative">
+            <img src="images/bet.jpg" alt="" />
+            <span
+              class="position-absolute top-0 mt-3 start-0 ms-2 badge rounded-pill bg-danger"
+              >5%
+            </span>
+            <p class="text-secondary mb-1">Fruit & Vegetavle</p>
+            <p class="mb-1">Fresh Beatroot</p>
+            <p class="text-warning d-flex gap-2">
+              <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-half"></i>
+              <span class="text-secondary"> 4.5(549)</span>
+            </p>
+            <div class="cart-footer d-flex gap-5 align-items-center">
+              <h5>$77 <del class="text-secondary">$9</del></h5>
+              <button class="btn btn-success">
+                <i class="bi bi-plus"></i>Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ................................Breakfast & dairy.................................... -->
+
+    <div class="container mt-5 py-3">
+      <h3>Breakfast & dairy</h3>
+      <p class="text-secondary">butter, cheese, milk, curd and more</p>
+    </div>
+
+    <div class="container mb-5">
+      <div class="row d-flex gap-2">
+        <div class="card" style="width: 19%">
+          <div class="card-body position-relative">
+            <img
+              src="https://freshcart.codescandy.com/assets/images/products/product-img-3.jpg"
+              alt=""
+            />
+            <span
+              class="position-absolute top-0 mt-3 start-0 ms-2 badge rounded-pill bg-danger"
+              >4%
+            </span>
+            <p class="text-secondary mb-1">Dairy,Bread & Egg</p>
+            <p class="mb-1">5 Star Chocklet</p>
+            <p class="text-warning d-flex gap-2">
+              <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-half"></i>
+              <span class="text-secondary"> 4.5(49)</span>
+            </p>
+            <div class="cart-footer d-flex gap-5 align-items-center">
+              <h5>$24 <del class="text-secondary">$6</del></h5>
+              <button class="btn btn-success">
+                <i class="bi bi-plus"></i>Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 19%">
+          <div class="card-body position-relative">
+            <img
+              src="https://freshcart.codescandy.com/assets/images/products/product-img-4.jpg"
+              alt=""
+            />
+            <span
+              class="position-absolute top-0 mt-3 start-0 ms-2 badge rounded-pill bg-success"
+              >Sale
+            </span>
+            <p class="text-secondary mb-1">Dairy,Bread & Egg</p>
+            <p class="mb-1">Onion flower Chips</p>
+            <p class="text-warning d-flex gap-2">
+              <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-half"></i>
+              <span class="text-secondary"> 5.5(149)</span>
+            </p>
+            <div class="cart-footer d-flex gap-5 align-items-center">
+              <h5>$34 <del class="text-secondary">$9</del></h5>
+              <button class="btn btn-success">
+                <i class="bi bi-plus"></i>Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 19%">
+          <div class="card-body position-relative">
+            <img
+              src="https://freshcart.codescandy.com/assets/images/products/product-img-8.jpg"
+              alt=""
+            />
+            <p class="text-secondary mb-1">Dairy,Bread & Egg</p>
+            <p class="mb-1">Fresh Corn</p>
+            <p class="text-warning d-flex gap-2">
+              <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-half"></i>
+              <span class="text-secondary"> 5.5(249)</span>
+            </p>
+            <div class="cart-footer d-flex gap-5 align-items-center">
+              <h5>$64 <del class="text-secondary">$16</del></h5>
+              <button class="btn btn-success">
+                <i class="bi bi-plus"></i>Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 19%">
+          <div class="card-body position-relative">
+            <img
+              src="https://freshcart.codescandy.com/assets/images/products/product-img-6.jpg"
+              alt=""
+            />
+            <span
+              class="position-absolute top-0 mt-3 start-0 ms-2 badge rounded-pill bg-success"
+              >Hot
+            </span>
+            <p class="text-secondary mb-1">Fruit & Vegetavle</p>
+            <p class="mb-1">Fresh Pineapple</p>
+            <p class="text-warning d-flex gap-2">
+              <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-half"></i>
+              <span class="text-secondary"> 7.5(749)</span>
+            </p>
+            <div class="cart-footer d-flex gap-5 align-items-center">
+              <h5>$54 <del class="text-secondary">$5</del></h5>
+              <button class="btn btn-success">
+                <i class="bi bi-plus"></i>Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 19%">
+          <div class="card-body position-relative">
+            <img
+              src="https://freshcart.codescandy.com/assets/images/products/product-img-5.jpg"
+              alt=""
+            />
+            <span
+              class="position-absolute top-0 mt-3 start-0 ms-2 badge rounded-pill bg-danger"
+              >5%
+            </span>
+            <p class="text-secondary mb-1">Dairy,Bread & Egg</p>
+            <p class="mb-1">Fresh Beatroot</p>
+            <p class="text-warning d-flex gap-2">
+              <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i
+              ><i class="bi bi-star-half"></i>
+              <span class="text-secondary"> 4.5(549)</span>
+            </p>
+            <div class="cart-footer d-flex gap-5 align-items-center">
+              <h5>$77 <del class="text-secondary">$9</del></h5>
+              <button class="btn btn-success">
+                <i class="bi bi-plus"></i>Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- .......................FreshCart app section................................... -->
+
+    <div class="container">
+      <hr class="mt-5" />
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-6 bg-light">
+          <img src="images/iphone-2.png" alt="" style="margin-left: 40%" />
+        </div>
+        <div class="col-6">
+          <div class=" " style="margin-left: 10%; margin-top: 16%">
+            <h2>Get the FreshCart app</h2>
+            <p>
+              We will send you a link, open it on your phone to download the
+              app.
+            </p>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault1"
+              />
+              <label class="form-check-label" for="flexRadioDefault1"
+                >Email</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2"
+                >Name
+              </label>
+            </div>
+
+            <p class="gap-1 mt-3">
+              <input
+                type="text"
+                placeholder="Name"
+                style="
+                  width: 40%;
+                  height: 35px;
+                  border: 2px slid gray;
+                  border-radius: 5px;
+                  margin-top: 19px;
+                "
+              />
+              <a
+                href="#"
+                class="btn btn-success"
+                role="button"
+                data-bs-toggle="button"
+                >Share App Link</a
+              >
+            </p>
+            <p class="text-secondary">Download app from</p>
+            <div class="downloadsection">
+              <img src="images/appstore-btn.svg" alt="" />
+              <img src="images/googleplay-btn.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ..........................information .................. -->
+
+    <div class="container">
+      <hr class="mt-5" />
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-3">
+          <img src="images/x.svg" alt="" class="mb-2" />
+          <h5>10 minute grocery now</h5>
+          <p>
+            Get your order delivered to your doorstep at the earliest from
+            FreshCart pickup stores near you.
+          </p>
+        </div>
+        <div class="col-3">
+          <img src="images/x1.svg" alt="" class="mb-2" />
+          <h5>Best Prices & Offers</h5>
+          <p>
+            Cheaper prices than your local supermarket, great cashback offers to
+            top it off. Get best pricess & offers.
+          </p>
+        </div>
+        <div class="col-3">
+          <img src="images/x2.svg" alt="" class="mb-2" />
+          <h5>Wide Assortment</h5>
+          <p>
+            Choose from 5000+ products across food, personal care, household,
+            bakery, veg and non-veg & other categories.
+          </p>
+        </div>
+        <div class="col-3">
+          <img src="images/x3.svg" alt="" class="mb-2" />
+          <h5>Easy Returns</h5>
+          <p>
+            Not satisfied with a product? Return it at the doorstep & get a
+            refund within hours. No questions asked policy ..
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--...................................... footer section........................................................ -->
+
+    <div
+      class="container-fluid mt-5"
+      style="background-color: rgb(240 243 242)"
+    >
+      <div class="row" style="margin-left: 5%; margin-right: 3%">
+        <div class="col">
+          <ul class="nav flex-column text-secondary">
+            <li class="nav-item fw-bold text-dark mt-5">Categories</li>
+            <li class="nav-item mt-3 linkhover">Vegetable & Fruits</li>
+            <li class="nav-item linkhover">Brakfast & instant food</li>
+            <li class="nav-item linkhover">Bakery & Biscuit</li>
+            <li class="nav-item linkhover">Atta,rice& dal</li>
+            <li class="nav-item linkhover">Sauces & Spreads</li>
+            <li class="nav-item linkhover">Organic & grounet</li>
+            <li class="nav-item linkhover">Baby Care</li>
+            <li class="nav-item linkhover">CareCealing essiantail</li>
+            <li class="nav-item linkhover mb-3">personal Care</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <ul class="nav flex-column text-secondary">
+            <li class="nav-item fw-bold text-light mt-5">.</li>
+            <li class="nav-item mt-3 linkhover">Dairy,bread & eggs</li>
+            <li class="nav-item linkhover">cold ,drink & Juices</li>
+            <li class="nav-item linkhover">Tea coffiess</li>
+            <li class="nav-item linkhover">Atta,rice& dal</li>
+            <li class="nav-item linkhover">Sauces & Spreads</li>
+            <li class="nav-item linkhover">paan corner</li>
+            <li class="nav-item linkhover">Pet care</li>
+            <li class="nav-item linkhover">Chicken meat</li>
+            <li class="nav-item linkhover">Home & office</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <ul class="nav flex-column text-secondary">
+            <li class="nav-item fw-bold text-dark mt-5">Ge to know us</li>
+            <li class="nav-item mt-3 linkhover">Company</li>
+            <li class="nav-item linkhover">About</li>
+            <li class="nav-item linkhover">Blog</li>
+            <li class="nav-item linkhover">Help Center</li>
+            <li class="nav-item linkhover">Our Value</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <ul class="nav flex-column text-secondary">
+            <li class="nav-item fw-bold text-dark mt-5">For Consummers</li>
+            <li class="nav-item mt-3 linkhover">Payments</li>
+            <li class="nav-item linkhover">Shipping</li>
+            <li class="nav-item linkhover">Produc Return</li>
+            <li class="nav-item linkhover">FAQ</li>
+            <li class="nav-item linkhover">Shop checkout</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <ul class="nav flex-column text-secondary">
+            <li class="nav-item fw-bold text-dark mt-5">Become a shopper</li>
+            <li class="nav-item mt-3 linkhover">shopper Oppertunity</li>
+            <li class="nav-item linkhover">Become a shopper</li>
+            <li class="nav-item linkhover">Earning</li>
+            <li class="nav-item linkhover">Ideas & Guides</li>
+            <li class="nav-item linkhover">New Retailers</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <ul class="nav flex-column text-secondary">
+            <li class="nav-item fw-bold text-dark mt-5">Frescart Programs</li>
+            <li class="nav-item mt-3 linkhover">Freshcard programs</li>
+            <li class="nav-item linkhover">Gift Crds</li>
+            <li class="nav-item linkhover">Promos & Coupons</li>
+            <li class="nav-item linkhover">Freshcart Ads</li>
+            <li class="nav-item linkhover">Careers</li>
+          </ul>
+        </div>
+
+        <div class="container">
+          <hr class="mt" />
+        </div>
+
+        <nav class="navbar bg-transparent">
+          <div class="container-fluid">
+            <div class="navbar-brand d-flex gap-2 align-items-center">
+              <p>Payment Partners</p>
+              <img src="images/amazonpay.svg" alt="" />
+              <img src="images/a1.svg" alt="" />
+              <img src="images/a2.svg" alt="" />
+              <img src="images/a3.svg" alt="" />
+              <img src="images/a4.svg" alt="" />
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <p>Get deliveries with FreshCart</p>
+              <img src="images/googleplay-btn.svg" alt="" />
+              <img src="images/appstore-btn.svg" alt="" />
+            </div>
+          </div>
+        </nav>
+
+        <div class="container">
+          <hr class="mt" />
+        </div>
+
+          <nav class="navbar bg-transparent">
+        <div class="container-fluid">
+             <div class=" align-items-center">
+                  <p class="text-secondary fs-25">© 2022 - 2024 FreshCart eCommerce HTML Template. All rights reserved. Powered by <span class="text-success">Codescandy </span>.</p>
+             </div>
+          <div class="d-flex gap-3 align-items-center">
+             <p class="text-secondary border-1">Follow us on</p>
+             <i class="bi bi-facebook"></i>
+             <i class="bi bi-twitter"></i>
+             <i class="bi bi-instagram"></i>
+          </div>
+        </div>
+      </nav>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+<!-- https://freshcart.codescandy.com/pages/index-2.html -->
